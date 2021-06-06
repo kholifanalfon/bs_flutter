@@ -7,9 +7,9 @@ class BsCol extends StatelessWidget {
   const BsCol({
     Key? key,
     this.visibility = BsVisibility.block,
-    this.sizes = const ColSize(),
+    this.sizes = const ColScreen(),
     this.order = const ColOrder(),
-    this.offset = const ColSize(),
+    this.offset = const ColScreen(),
     this.color,
     this.height,
     this.constraints,
@@ -31,16 +31,16 @@ class BsCol extends StatelessWidget {
   ///
   final BsVisibility visibility;
 
-  /// Set width of [BsCol] base on [BreakPoint] using [ColSize]
+  /// Set width of [BsCol] base on [BreakPoint] using [ColScreen]
   /// if [sizes] is empty, system automatically using [Col.col_12] in all breakpoint
-  final ColSize sizes;
+  final ColScreen sizes;
 
   /// If you need to change order of [BsCol] in some [BreakPoint]
   /// [ColOrder] is very helpful
   final ColOrder order;
 
-  /// Set offset of [BsCol] base on [BreakPoint] using [ColSize]
-  final ColSize offset;
+  /// Set offset of [BsCol] base on [BreakPoint] using [ColScreen]
+  final ColScreen offset;
 
   /// Color of Container widget in [BsCol]
   final Color? color;

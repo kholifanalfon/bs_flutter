@@ -52,8 +52,8 @@ class Col {
 }
 
 /// Will handle screen device using which breakpoint
-class ColSize {
-  const ColSize({
+class ColScreen {
+  const ColScreen({
     this.xs,
     this.sm,
     this.md,
@@ -81,23 +81,23 @@ class ColSize {
   final Col? xxl;
 
   /// Will set width [BsCol] in all screen device
-  factory ColSize.all(Col size) {
-    return ColSize(sm: size);
+  factory ColScreen.all(Col size) {
+    return ColScreen(sm: size);
   }
 
   /// Will set width [BsCol] in mobile screen including
   /// - [BreakPoint.sm] (>= 567 px)
   /// - [BreakPoint.md] (>= 768 px)
-  factory ColSize.onlyMobile(Col size) {
-    return ColSize(sm: size, md: Col.col_12);
+  factory ColScreen.onlyMobile(Col size) {
+    return ColScreen(sm: size, md: Col.col_12);
   }
 
   /// Will set width [BsCol] in tablet screen including
   /// - [BreakPoint.sm] (>= 567 px)
   /// - [BreakPoint.md] (>= 768 px)
   /// - [BreakPoint.lg] (>= 960 px)
-  factory ColSize.onlyTablet(Col size) {
-    return ColSize(md: size, lg: Col.col_12);
+  factory ColScreen.onlyTablet(Col size) {
+    return ColScreen(md: size, lg: Col.col_12);
   }
 
   /// Will set width [BsCol] in tablet screen including
@@ -105,13 +105,13 @@ class ColSize {
   /// - [BreakPoint.md] (>= 768 px)
   /// - [BreakPoint.lg] (>= 960 px)
   /// - [BreakPoint.xl] (>= 1140 px)
-  factory ColSize.onlyDesktop(Col size) {
-    return ColSize(lg: size);
+  factory ColScreen.onlyDesktop(Col size) {
+    return ColScreen(lg: size);
   }
 
   /// Will set width [BsCol] in mobile, tablet, desktop screen including
-  factory ColSize.inDevice({Col? mobile, Col? tablet, Col? desktop}) {
-    return ColSize(sm: mobile, md: tablet, lg: desktop);
+  factory ColScreen.inDevice({Col? mobile, Col? tablet, Col? desktop}) {
+    return ColScreen(sm: mobile, md: tablet, lg: desktop);
   }
 }
 
@@ -154,9 +154,9 @@ class ColCalc {
 
   final BuildContext context;
 
-  final ColSize sizes;
+  final ColScreen sizes;
 
-  final ColSize offset;
+  final ColScreen offset;
 
   /// Get width of [BsCol]
   Col? get width {
