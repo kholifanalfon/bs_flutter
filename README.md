@@ -1,4 +1,4 @@
-### BS Flutter (Bootstrap Flutter)
+# BS Flutter (Bootstrap Flutter)
 
 Simple flutter widget from Bootstrap v5 component, including responsive grid layout with bootstrap grid system
 
@@ -24,13 +24,13 @@ This plugin helps you to migrate from html based to dart in creating web interfa
 ## Getting Started
 Add the dependency in `pubspec.yaml`:
 
-```dart
+```yaml
 dependencies:
   ...
   bs_flutter: any
 ```
 
-## Responsive Grid / Grid System
+### Responsive Grid / Grid System
 Grid system is very important when you create some web application. Especially for create responsive layout. This plugin is help to solve it
 
 To create responsive layout you must using widget `BsRow` and `BsCol` or if in bootstrap use class="row" and class="col-*" 
@@ -107,7 +107,7 @@ BsRow(
 // ...
 )
 ```
-# Note
+#### Note
 - Properties `sizes` in `BsCol` is has default value `Col.col_12` or 100% of screen width
 - If need to ordering column use properties `order` with value `BsScreen`
 - If need to custom offset of column use properties `offet` with value `BsScreen`
