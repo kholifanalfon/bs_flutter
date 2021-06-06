@@ -17,12 +17,12 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getPlatformVersion', () async {
-    expect(await BsFlutter.platformVersion, '42');
-  });
-
   test('Bs Grids', () async {
     BsRow();
     BsCol();
+  });
+
+  test('Bs Grids', () async {
+    BsAlert();
   });
 }
