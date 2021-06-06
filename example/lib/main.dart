@@ -1,8 +1,5 @@
-import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
 import 'package:bs_flutter/bs_flutter.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,46 +11,84 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
-
   @override
   void initState() {
     super.initState();
-    initPlatformState();
-  }
-
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    // We also handle the message potentially returning null.
-    try {
-      platformVersion =
-          await BsFlutter.platformVersion ?? 'Unknown platform version';
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-
-    setState(() {
-      _platformVersion = platformVersion;
-    });
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
-        ),
+        body: Scrollbar(
+            child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                child: Container(
+                  child: BsRow(
+                    gutter: EdgeInsets.only(
+                        left: 10.0, right: 10.0, top: 5.0, bottom: 5.0),
+                    children: [
+                      BsCol(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black),
+                        ),
+                        padding: EdgeInsets.all(20.0),
+                        sizes: ColSize.all(Col.col_12),
+                        child: Center(child: Text('col-12')),
+                      ),
+                      BsCol(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black),
+                        ),
+                        padding: EdgeInsets.all(20.0),
+                        sizes: ColSize(
+                            sm: Col.col_12, md: Col.col_12, lg: Col.col_6),
+                        order: ColOrder(md: 1),
+                        child: Center(
+                            child: Text(
+                                'col-sm-12 col-md-12 col-md-6 col-order-lg-1')),
+                      ),
+                      BsCol(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black),
+                        ),
+                        padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                        sizes: ColSize(md: Col.col_6),
+                        child: BsRow(
+                          children: [
+                            BsCol(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(color: Colors.black),
+                              ),
+                              padding: EdgeInsets.all(10.0),
+                              sizes: ColSize(md: Col.col_4),
+                              child: Center(child: Text('Nested col-md-4')),
+                            ),
+                            BsCol(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(color: Colors.black),
+                              ),
+                              padding: EdgeInsets.all(10.0),
+                              sizes: ColSize(md: Col.col_4),
+                              offset: ColSize(lg: Col.col_4),
+                              child: Center(
+                                  child:
+                                      Text('Nested col-md-4 col-offset-lg-4')),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        )),
       ),
     );
   }

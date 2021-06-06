@@ -20,4 +20,9 @@ void main() {
   test('getPlatformVersion', () async {
     expect(await BsFlutter.platformVersion, '42');
   });
+
+  test('Bs Grids', () async {
+    BsRow();
+    BsCol();
+  });
 }

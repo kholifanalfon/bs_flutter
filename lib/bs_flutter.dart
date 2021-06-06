@@ -1,11 +1,13 @@
-
 import 'dart:async';
 
 import 'package:flutter/services.dart';
 
+export 'src/utility/breakpoint.dart';
+export 'src/utility/utils.dart';
+export 'src/grids/bs_row.dart';
+
 class BsFlutter {
-  static const MethodChannel _channel =
-      const MethodChannel('bs_flutter');
+  static const MethodChannel _channel = const MethodChannel('bs_flutter');
 
   static Future<String?> get platformVersion async {
     final String? version = await _channel.invokeMethod('getPlatformVersion');
