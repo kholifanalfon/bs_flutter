@@ -44,7 +44,7 @@ dependencies:
 ```
 
 ### Responsive Grid / Grid System
-Example: [a link](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_grid.dart "`example_grid.dart`")
+Example: [`example_grid.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_grid.dart)
 
 Grid system is very important when you create some web application. Especially for create responsive layout. This plugin is help to solve it
 
@@ -133,7 +133,7 @@ BsRow(
 - `BsVisibility.hiddenMd` will hide widget in max screen medium or < 768 px, above it will show
 
 ### Buttons
-Example: [a link](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_buttons.dart "`example_buttons.dart`")
+Example: [`example_buttons.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_buttons.dart)
 
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_buttons.png "Screenshot Example Buttons")
 
@@ -171,7 +171,7 @@ To create some button use `BsButton`
 ```
 
 ### Badge
-Example: [a link](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_badge.dart "`example_badge.dart`")
+Example: [`example_badge.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_badge.dart)
 
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_badge.png "Screenshot Example Badge")
 
@@ -206,7 +206,7 @@ To create badge use `BsBadge`, `BsBadge` is available use in `BsButton`
 ```
 
 ### Text Input
-Example: [a link](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_inputtext.dart "`example_inputtext.dart`")
+Example: [`example_inputtext.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_inputtext.dart)
 
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_inputtext.png "Screenshot Example Badge")
 
@@ -250,7 +250,7 @@ Example:
 `validator` properties will call when form on validating
 
 ### Alert
-Example: [a link](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_alert.dart "`example_alert.dart`")
+Example: [`example_alert.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_alert.dart)
 
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_alert.png "Screenshot Example Alert")
 
@@ -301,7 +301,7 @@ You can create custom alert style using `BsAlertStyle` and alert color using `Bs
 ```
 
 ### Modals
-Example: [a link](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_modal.dart "`example_modal.dart`")
+Example: [`example_modal.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_modal.dart)
 
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_modal_1.png "Screenshot Example Modal")
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_modal_2.png "Screenshot Example Modal")
