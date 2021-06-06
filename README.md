@@ -19,9 +19,9 @@ Simple flutter widget from Bootstrap v5 component, including responsive grid lay
     - [x] Error message with beautiful design
 - [x] Alert
 - [x] Badge
-- [-] Select
-- [-] Checkbox
-- [-] Radio Button
+- [ ] Select
+- [ ] Checkbox
+- [ ] Radio Button
 
 ### Utilities
 - [x] Grid System
@@ -30,7 +30,7 @@ Simple flutter widget from Bootstrap v5 component, including responsive grid lay
     - [x] Custom gutters
     - [x] Column offset
     - [x] Responsive hide and show
-- [-] Multiple Validation
+- [ ] Multiple Validation
 
 This plugin helps you to migrate from html based to dart in creating web interfaces. More specifically for those who are already able to use bootstrap
 
