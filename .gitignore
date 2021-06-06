@@ -2,7 +2,10 @@
 
 # Files and directories created by pub
 .dart_tool/
+.pub/
+.idea/
 .packages
+.DS_Store
 build/
 # If you're building an application, you may want to check-in your pubspec.lock
 pubspec.lock
