@@ -1,5 +1,3 @@
-export 'src/utility/breakpoint.dart';
-export 'src/utility/utils.dart';
 export 'src/grids/bs_row.dart';
 export 'src/others/bs_container.dart';
 export 'src/navbars/bs_navbar.dart';
@@ -9,3 +7,4 @@ export 'src/components/bs_modal.dart';
 export 'src/components/bs_alert.dart';
 export 'src/components/bs_hr.dart';
 export 'src/components/bs_inputtext.dart';
+export 'src/utility/utils.dart';

@@ -1,6 +1,6 @@
 library bs_row;
 
-import 'package:bs_flutter/bs_flutter.dart';
+import 'package:bs_flutter_utils/bs_flutter_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

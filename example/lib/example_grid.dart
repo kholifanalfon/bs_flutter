@@ -1,4 +1,5 @@
 import 'package:bs_flutter/bs_flutter.dart';
+import 'package:bs_flutter_utils/bs_flutter_utils.dart';
 import 'package:flutter/material.dart';
 
 class ExampleGrid extends StatelessWidget {
