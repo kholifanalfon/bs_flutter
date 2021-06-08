@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         body: Scrollbar(
-          child: SingleChildScrollView(
+            child: SingleChildScrollView(
           child: Column(
             children: [
               BsNavbar(

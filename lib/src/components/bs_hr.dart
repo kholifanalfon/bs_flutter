@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 /// Widget of Horizontal Rule
 class BsHorizontalRule extends StatelessWidget {
-
   /// Construct [BsHorizontalRule]
   const BsHorizontalRule({
     this.width = 0.2,
@@ -20,14 +19,14 @@ class BsHorizontalRule extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(child: Container(
+        Expanded(
+            child: Container(
           margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
           decoration: BoxDecoration(
-              border: Border.all(color: color == null ? BsColor.color : color!, width: width)
-          ),
+              border: Border.all(
+                  color: color == null ? BsColor.color : color!, width: width)),
         )),
       ],
     );
   }
-
 }

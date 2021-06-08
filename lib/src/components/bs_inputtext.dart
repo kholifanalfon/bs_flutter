@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 
 /// Class to define of [BsInputText]
 class BsInputStyle {
-
   /// Construct [BsInputStyle]
   const BsInputStyle({
     this.color = BsColor.primary,
@@ -46,20 +45,15 @@ class BsInputStyle {
           offset: Offset(0, 0),
           spreadRadius: 2.5,
         )
-      ]
-  );
+      ]);
 
   /// define style outline bottom input text
   static const BsInputStyle outlineBottom = BsInputStyle(
-      border: Border(
-        bottom: BorderSide(color: BsColor.borderColor)
-      )
-  );
+      border: Border(bottom: BorderSide(color: BsColor.borderColor)));
 }
 
 /// Class to define size of [BsInputText]
 class BsInputSize {
-
   /// Construct [BsInputSize]
   const BsInputSize({
     this.padding,
@@ -153,7 +147,6 @@ class BsInputSize {
 
 /// Widget of Bootstrap Input Text and customize input text
 class BsInput extends StatefulWidget {
-
   /// Construct BsInput
   const BsInput({
     Key? key,
@@ -306,7 +299,6 @@ class BsInput extends StatefulWidget {
 }
 
 class _BsInputState extends State<BsInput> with SingleTickerProviderStateMixin {
-
   FocusNode? focusNode;
   FormFieldState? formFieldState;
 
@@ -314,13 +306,14 @@ class _BsInputState extends State<BsInput> with SingleTickerProviderStateMixin {
   AnimationController? animated;
 
   String? get hintText {
-    if(widget.hintText == null)
-      return '';
+    if (widget.hintText == null) return '';
 
     return widget.hintText;
   }
 
-  bool get valid => (formFieldState != null && formFieldState!.validate()) || (_errorText == null);
+  bool get valid =>
+      (formFieldState != null && formFieldState!.validate()) ||
+      (_errorText == null);
 
   String? _errorText;
   TextEditingController get controller => widget.controller;
@@ -332,10 +325,7 @@ class _BsInputState extends State<BsInput> with SingleTickerProviderStateMixin {
     focusNode = widget.focusNode == null ? FocusNode() : widget.focusNode;
     focusNode!.addListener(onFocusNode);
 
-    animated = AnimationController(
-        vsync: this,
-        duration: duration
-    );
+    animated = AnimationController(vsync: this, duration: duration);
     super.initState();
   }
 
@@ -355,10 +345,11 @@ class _BsInputState extends State<BsInput> with SingleTickerProviderStateMixin {
 
   void onFocusNode() {
     setState(() {
-      if(!focusNode!.hasFocus) {
+      if (!focusNode!.hasFocus) {
         _errorText = null;
         widget.validators.map((validator) {
-          if(_errorText == null) _errorText = validator.validator(controller.text);
+          if (_errorText == null)
+            _errorText = validator.validator(controller.text);
         }).toList();
         animated!.reverse();
       } else {
@@ -379,25 +370,25 @@ class _BsInputState extends State<BsInput> with SingleTickerProviderStateMixin {
                 return _errorText;
               },
               builder: (field) {
-                if(formFieldState == null)
-                  formFieldState = field;
+                if (formFieldState == null) formFieldState = field;
 
                 BoxBorder? border = widget.style.border;
-                if(focusNode!.hasFocus)
-                  if(widget.style.boxShadowFocused.length == 0)
-                    border = Border(bottom: BorderSide(color: BsColor.primary));
-                  else border = Border.all(color: BsColor.primary);
+                if (focusNode!
+                    .hasFocus) if (widget.style.boxShadowFocused.length == 0)
+                  border = Border(bottom: BorderSide(color: BsColor.primary));
+                else
+                  border = Border.all(color: BsColor.primary);
 
-                if(!valid)
-                  if(widget.style.boxShadowFocused.length == 0)
-                    border = Border(bottom: BorderSide(color: BsColor.danger));
-                  else border = Border.all(color: BsColor.danger);
+                if (!valid) if (widget.style.boxShadowFocused.length == 0)
+                  border = Border(bottom: BorderSide(color: BsColor.danger));
+                else
+                  border = Border.all(color: BsColor.danger);
 
                 List<BoxShadow> boxShadow = [];
-                if(focusNode!.hasFocus)
+                if (focusNode!.hasFocus)
                   boxShadow = widget.style.boxShadowFocused;
 
-                if(!valid && widget.style.boxShadowFocused.length != 0)
+                if (!valid && widget.style.boxShadowFocused.length != 0)
                   boxShadow = [
                     BoxShadow(
                       color: BsColor.dangerShadow,
@@ -411,8 +402,7 @@ class _BsInputState extends State<BsInput> with SingleTickerProviderStateMixin {
                         color: widget.style.backgroundColor,
                         border: border,
                         borderRadius: widget.style.borderRadius,
-                        boxShadow: boxShadow
-                    ),
+                        boxShadow: boxShadow),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -424,8 +414,7 @@ class _BsInputState extends State<BsInput> with SingleTickerProviderStateMixin {
                               isDense: true,
                               hintStyle: TextStyle(
                                 fontSize: widget.size.fontSize,
-                              )
-                          ),
+                              )),
                           focusNode: focusNode,
                           enabled: !widget.disabled,
                           readOnly: widget.readOnly,
@@ -446,18 +435,17 @@ class _BsInputState extends State<BsInput> with SingleTickerProviderStateMixin {
                           onEditingComplete: widget.onEditingComplete,
                           onChanged: (value) {
                             field.didChange(value);
-                            if(widget.onChange != null)
+                            if (widget.onChange != null)
                               widget.onChange!(value);
                           },
                           onFieldSubmitted: (value) {
                             field.didChange(value);
-                            if(widget.onFieldSubmitted != null)
+                            if (widget.onFieldSubmitted != null)
                               widget.onFieldSubmitted!(value);
                           },
                           onSaved: (value) {
                             field.didChange(value);
-                            if(widget.onSaved != null)
-                              widget.onSaved!(value);
+                            if (widget.onSaved != null) widget.onSaved!(value);
                           },
                           showCursor: widget.showCursor,
                           cursorColor: widget.cursorColor,
@@ -469,27 +457,32 @@ class _BsInputState extends State<BsInput> with SingleTickerProviderStateMixin {
                           scrollPhysics: widget.scrollPhysics,
                         ),
                       ],
-                    )
-                );
+                    ));
               },
             ),
-            valid ? Container() : Container(
-              margin: EdgeInsets.only(top: 5.0, left: 2.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                _errorText.toString(),
-                style: TextStyle(
-                    fontSize: 12.0,
-                    color: BsColor.textError
-                ),
-              ),
-            )
+            valid
+                ? Container()
+                : Container(
+                    margin: EdgeInsets.only(top: 5.0, left: 2.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      _errorText.toString(),
+                      style:
+                          TextStyle(fontSize: 12.0, color: BsColor.textError),
+                    ),
+                  )
           ],
         ),
-        widget.hintTextLabel == null ? Container(width: 0) : GestureDetector(
-          onTap: () => focusNode!.requestFocus(),
-          child: widget.hintTextLabel != null ? renderHintTextLabel(valid ? widget.style.color! : BsColor.textError, Colors.grey) : Text(''),
-        ),
+        widget.hintTextLabel == null
+            ? Container(width: 0)
+            : GestureDetector(
+                onTap: () => focusNode!.requestFocus(),
+                child: widget.hintTextLabel != null
+                    ? renderHintTextLabel(
+                        valid ? widget.style.color! : BsColor.textError,
+                        Colors.grey)
+                    : Text(''),
+              ),
       ],
     );
   }
@@ -498,37 +491,43 @@ class _BsInputState extends State<BsInput> with SingleTickerProviderStateMixin {
     return AnimatedBuilder(
       animation: animated!,
       builder: (context, _) {
-        double top = isEmpty ? (widget.size.marginTop! + widget.size.transitionMarginTop!) * animated!.value
+        double top = isEmpty
+            ? (widget.size.marginTop! + widget.size.transitionMarginTop!) *
+                animated!.value
             : widget.size.transitionMarginTop!;
 
-        double left = isEmpty ? (widget.size.marginLeft! + widget.size.transitionMarginLeft!) * animated!.value : widget.size.transitionMarginLeft!;
+        double left = isEmpty
+            ? (widget.size.marginLeft! + widget.size.transitionMarginLeft!) *
+                animated!.value
+            : widget.size.transitionMarginLeft!;
 
-        double fontSize = isEmpty ? widget.size.fontSize! - (widget.size.transisionFontSize! * animated!.value).toDouble()
+        double fontSize = isEmpty
+            ? widget.size.fontSize! -
+                (widget.size.transisionFontSize! * animated!.value).toDouble()
             : widget.size.fontSize! - widget.size.transisionFontSize!;
 
-
         Color textColor = color;
-        if(animated!.value == 0)
-          textColor = placeholderColor;
+        if (animated!.value == 0) textColor = placeholderColor;
 
-        if(!isEmpty && animated!.value == 1)
-          textColor = color;
+        if (!isEmpty && animated!.value == 1) textColor = color;
 
         return Transform(
-          transform: Matrix4.identity()
-            ..translate(-left, -top),
+          transform: Matrix4.identity()..translate(-left, -top),
           child: Container(
             padding: EdgeInsets.only(left: 2.0, right: 2.0),
-            margin: EdgeInsets.only(left: isEmpty ? widget.size.marginLeft! : 0, top: isEmpty ? widget.size.marginTop! : 0),
+            margin: EdgeInsets.only(
+                left: isEmpty ? widget.size.marginLeft! : 0,
+                top: isEmpty ? widget.size.marginTop! : 0),
             color: widget.style.backgroundColor,
-            child: Text(widget.hintTextLabel!, style: TextStyle(
-              fontSize: fontSize,
-              color: textColor,
-            ), overflow: TextOverflow.ellipsis),
+            child: Text(widget.hintTextLabel!,
+                style: TextStyle(
+                  fontSize: fontSize,
+                  color: textColor,
+                ),
+                overflow: TextOverflow.ellipsis),
           ),
         );
       },
     );
   }
-
 }

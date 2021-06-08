@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 /// Class for customize [BsNavBrand]
 class BsNavBrandStyle {
-
   /// Constructor [BsNavBrandStyle]
   const BsNavBrandStyle({
     this.padding,
@@ -21,7 +20,6 @@ class BsNavBrandStyle {
 
 /// This is on of [BsNavbar] child
 class BsNavBrand extends StatelessWidget {
-
   /// Constructor [BsNavBrand]
   const BsNavBrand({
     Key? key,
@@ -46,17 +44,14 @@ class BsNavBrand extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: onPressed,
-      child: DefaultTextStyle(
-        style: TextStyle(
-          fontSize: 20.0,
-        ).merge(textStyle),
-        child: Container(
-          padding: brandStyle.padding,
-          child: child,
-        )
-      )
-    );
+        onPressed: onPressed,
+        child: DefaultTextStyle(
+            style: TextStyle(
+              fontSize: 20.0,
+            ).merge(textStyle),
+            child: Container(
+              padding: brandStyle.padding,
+              child: child,
+            )));
   }
-
 }

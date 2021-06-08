@@ -3,21 +3,20 @@ import 'package:flutter/material.dart';
 
 /// Class to set size of [BsModal] base on breakpint
 class BsModalSize {
-
   /// define width of small modal
-  static const double widthSm   = 300.0;
+  static const double widthSm = 300.0;
 
   /// define width of medium modal
-  static const double widthMd   = 500.0;
+  static const double widthMd = 500.0;
 
   /// define width of large modal
-  static const double widthLg   = 800.0;
+  static const double widthLg = 800.0;
 
   /// define width of extra large modal
-  static const double widthXl   = 1140.0;
+  static const double widthXl = 1140.0;
 
   /// define width of extra extra large modal
-  static const double widthXxl  = 1350.0;
+  static const double widthXxl = 1350.0;
 
   /// Constructor [BsModalSize]
   const BsModalSize({
@@ -34,13 +33,24 @@ class BsModalSize {
   /// define modal size small
   static const BsModalSize sm = BsModalSize(
     width: widthSm,
-    breakPoints: [BreakPoint.stateSm, BreakPoint.stateMd, BreakPoint.stateLg, BreakPoint.stateXl, BreakPoint.stateXxl],
+    breakPoints: [
+      BreakPoint.stateSm,
+      BreakPoint.stateMd,
+      BreakPoint.stateLg,
+      BreakPoint.stateXl,
+      BreakPoint.stateXxl
+    ],
   );
 
   /// define modal size medium
   static const BsModalSize md = BsModalSize(
     width: widthMd,
-    breakPoints: [BreakPoint.stateMd, BreakPoint.stateLg, BreakPoint.stateXl, BreakPoint.stateXxl],
+    breakPoints: [
+      BreakPoint.stateMd,
+      BreakPoint.stateLg,
+      BreakPoint.stateXl,
+      BreakPoint.stateXxl
+    ],
   );
 
   /// define modal size large
@@ -64,7 +74,6 @@ class BsModalSize {
 
 /// Widget of Bootstrap Modal
 class BsModal extends StatelessWidget {
-
   /// Construct [BsModal]
   const BsModal({
     Key? key,
@@ -81,17 +90,13 @@ class BsModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
-        Container(child: dialog)
-      ],
+      children: [Container(child: dialog)],
     );
   }
-
 }
 
 /// Widget of Bootstrap Modal Dialog
 class BsModalDialog extends StatelessWidget {
-
   /// Construct [BsModalDialog]
   const BsModalDialog({
     Key? key,
@@ -126,11 +131,13 @@ class BsModalDialog extends StatelessWidget {
         padding: EdgeInsets.all(15.0),
         child: Column(
           children: [
-            Expanded(child: Column(
+            Expanded(
+                child: Column(
               crossAxisAlignment: crossAxisAlignment,
               mainAxisAlignment: mainAxisAlignment,
               children: [
-                Scrollbar(child: SingleChildScrollView(
+                Scrollbar(
+                    child: SingleChildScrollView(
                   child: Container(
                     width: size.breakPoints.contains(breakPoint.state)
                         ? size.width
@@ -145,12 +152,10 @@ class BsModalDialog extends StatelessWidget {
       ),
     );
   }
-
 }
 
 /// Widget of Bootstrap Modal Content
 class BsModalContent extends StatelessWidget {
-
   /// Construct [BsModalContent]
   const BsModalContent({
     Key? key,
@@ -176,11 +181,14 @@ class BsModalContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(child: Container(
-          decoration: decoration != null ? decoration : BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(Radius.circular(5.0)),
-          ),
+        Expanded(
+            child: Container(
+          decoration: decoration != null
+              ? decoration
+              : BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                ),
           child: Column(
             crossAxisAlignment: crossAxisAlignment,
             mainAxisAlignment: mainAxisAlignment,
@@ -190,12 +198,10 @@ class BsModalContent extends StatelessWidget {
       ],
     );
   }
-
 }
 
 /// Widget of Bootstrap Modal Header, Body, Footer
 class BsModalContainer extends StatelessWidget {
-
   /// Construct [BsModalContainer]
   const BsModalContainer({
     Key? key,
@@ -246,64 +252,72 @@ class BsModalContainer extends StatelessWidget {
         children: [
           Row(
             children: [
-              title == null ? Container() : DefaultTextStyle(
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: BsColor.color,
-                  fontWeight: FontWeight.bold,
-                ).merge(titleStyle),
-                child: Expanded(child: Container(
-                    padding: padding != null
-                        ? padding
-                        : EdgeInsets.all(15.0),
-                    child: title
-                )),
-              ),
-              !closeButton ? Container(width: 0) : Container(
-                margin: EdgeInsets.only(right: padding != null ? padding!.right : 15.0),
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    minimumSize: Size(20.0, 20.0),
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                    if(onClose != null)
-                      onClose!();
-                  },
-                  child: Icon(Icons.close, size: 14.0, color: BsColor.color),
-                ),
-              )
+              title == null
+                  ? Container()
+                  : DefaultTextStyle(
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: BsColor.color,
+                        fontWeight: FontWeight.bold,
+                      ).merge(titleStyle),
+                      child: Expanded(
+                          child: Container(
+                              padding: padding != null
+                                  ? padding
+                                  : EdgeInsets.all(15.0),
+                              child: title)),
+                    ),
+              !closeButton
+                  ? Container(width: 0)
+                  : Container(
+                      margin: EdgeInsets.only(
+                          right: padding != null ? padding!.right : 15.0),
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          minimumSize: Size(20.0, 20.0),
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                          if (onClose != null) onClose!();
+                        },
+                        child:
+                            Icon(Icons.close, size: 14.0, color: BsColor.color),
+                      ),
+                    )
             ],
           ),
-          child == null ? Container() : Container(
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(color: BsColor.borderColor)
+          child == null
+              ? Container()
+              : Container(
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(color: BsColor.borderColor))),
+                ),
+          child == null
+              ? Container()
+              : Container(
+                  padding: padding == null ? EdgeInsets.all(15.0) : padding,
+                  child: child,
+                ),
+          actions.length == 0
+              ? Container()
+              : Container(
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(color: BsColor.borderColor))),
+                ),
+          actions.length == 0
+              ? Container()
+              : Container(
+                  padding: padding == null ? EdgeInsets.all(15.0) : padding,
+                  child: Column(
+                    crossAxisAlignment: crossAxisAlignment,
+                    mainAxisAlignment: mainAxisAlignment,
+                    children: actions,
+                  ),
                 )
-            ),
-          ),
-          child == null ? Container() : Container(
-            padding: padding == null ? EdgeInsets.all(15.0) : padding,
-            child: child,
-          ),
-          actions.length == 0 ? Container() : Container(
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(color: BsColor.borderColor)
-                )
-            ),
-          ),
-          actions.length == 0 ? Container() : Container(
-            padding: padding == null ? EdgeInsets.all(15.0) : padding,
-            child: Column(
-              crossAxisAlignment: crossAxisAlignment,
-              mainAxisAlignment: mainAxisAlignment,
-              children: actions,
-            ),
-          )
         ],
       ),
     );
   }
-
 }

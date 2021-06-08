@@ -14,9 +14,7 @@ class ExampleInputText extends StatelessWidget {
             size: BsInputSize.sm,
             hintText: 'Small input',
             controller: TextEditingController(),
-            validators: [
-              BsValidator.required
-            ],
+            validators: [BsValidator.required],
           ),
         ),
         BsCol(
@@ -26,9 +24,7 @@ class ExampleInputText extends StatelessWidget {
             size: BsInputSize.md,
             hintTextLabel: 'Medium input',
             controller: TextEditingController(),
-            validators: [
-              BsValidator.required
-            ],
+            validators: [BsValidator.required],
           ),
         ),
         BsCol(
@@ -70,13 +66,10 @@ class ExampleInputText extends StatelessWidget {
             hintTextLabel: 'Large input',
             maxLines: 5,
             controller: TextEditingController(),
-            validators: [
-              BsValidator.required
-            ],
+            validators: [BsValidator.required],
           ),
         ),
       ],
     );
   }
-  
 }

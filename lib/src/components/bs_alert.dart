@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 /// Class to set color of [BsAlert]
 class BsAlertColor {
-
   /// Construct [BsAlertColor]
   const BsAlertColor({
     required this.color,
@@ -73,13 +72,11 @@ class BsAlertColor {
   static const BsAlertColor dark = BsAlertColor(
       color: Color(0xff141619),
       backgroundColor: Color(0xffd3d3d4),
-      borderColor: Color(0xffbcbebf)
-  );
+      borderColor: Color(0xffbcbebf));
 }
 
 /// Class to set style of [BsAlert]
 class BsAlertStyle {
-
   /// Constructor [BsAlertStyle]
   const BsAlertStyle({
     this.color,
@@ -143,7 +140,6 @@ class BsAlertStyle {
 
 /// Wodget bootstrap alert
 class BsAlert extends StatefulWidget {
-
   /// Construct [BsAlert]
   const BsAlert({
     Key? key,
@@ -193,11 +189,9 @@ class BsAlert extends StatefulWidget {
   State<StatefulWidget> createState() {
     return _BsAlertState();
   }
-
 }
 
 class _BsAlertState extends State<BsAlert> {
-
   bool _visibility = true;
 
   @override
@@ -211,66 +205,68 @@ class _BsAlertState extends State<BsAlert> {
 
   @override
   Widget build(BuildContext context) {
-
-    return !_visibility ? Container()
+    return !_visibility
+        ? Container()
         : Container(
-      margin: widget.margin,
-      padding: widget.padding == null ? EdgeInsets.all(15.0) : widget.padding,
-      decoration: BoxDecoration(
-          color: widget.style.color!.backgroundColor,
-          borderRadius: widget.style.borderRadius,
-          border: Border.all(color: widget.style.color!.borderColor, width: 0.5)
-      ),
-      child: DefaultTextStyle(
-        style: TextStyle(
-            color: widget.style.color!.color,
-            fontSize: 14.0
-        ).merge(widget.textStyle),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                widget.heading == null ? Container() : DefaultTextStyle(
-                  style: TextStyle(
-                      color: widget.style.color!.color,
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.bold
-                  ),
-                  child: Container(
-                    padding: EdgeInsets.only(bottom: 15.0),
-                    child: widget.heading,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Expanded(child: Container(child: widget.child)),
-                  ],
-                )
-              ],
-            )),
-            !widget.closeButton ? Container(width: 0) : Container(
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  minimumSize: Size(20.0, 20.0),
-                ),
-                onPressed: () => _closeAlert(),
-                child: Icon(Icons.close, size: 14.0, color: widget.style.color!.color),
+            margin: widget.margin,
+            padding:
+                widget.padding == null ? EdgeInsets.all(15.0) : widget.padding,
+            decoration: BoxDecoration(
+                color: widget.style.color!.backgroundColor,
+                borderRadius: widget.style.borderRadius,
+                border: Border.all(
+                    color: widget.style.color!.borderColor, width: 0.5)),
+            child: DefaultTextStyle(
+              style: TextStyle(color: widget.style.color!.color, fontSize: 14.0)
+                  .merge(widget.textStyle),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                      child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      widget.heading == null
+                          ? Container()
+                          : DefaultTextStyle(
+                              style: TextStyle(
+                                  color: widget.style.color!.color,
+                                  fontSize: 24.0,
+                                  fontWeight: FontWeight.bold),
+                              child: Container(
+                                padding: EdgeInsets.only(bottom: 15.0),
+                                child: widget.heading,
+                              ),
+                            ),
+                      Row(
+                        children: [
+                          Expanded(child: Container(child: widget.child)),
+                        ],
+                      )
+                    ],
+                  )),
+                  !widget.closeButton
+                      ? Container(width: 0)
+                      : Container(
+                          child: TextButton(
+                            style: TextButton.styleFrom(
+                              minimumSize: Size(20.0, 20.0),
+                            ),
+                            onPressed: () => _closeAlert(),
+                            child: Icon(Icons.close,
+                                size: 14.0, color: widget.style.color!.color),
+                          ),
+                        )
+                ],
               ),
-            )
-          ],
-        ),
-      ),
-    );
+            ),
+          );
   }
 
   void _closeAlert() {
     setState(() {
       _visibility = false;
-      if(widget.onClose != null)
-        widget.onClose!();
+      if (widget.onClose != null) widget.onClose!();
     });
   }
-
 }

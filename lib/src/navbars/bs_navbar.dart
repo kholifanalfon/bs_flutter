@@ -5,7 +5,6 @@ export 'bs_navbrand.dart';
 
 /// Class for customize style [BsNavbar]
 class BsNavbarStyle {
-
   /// If [backgroundColor] isEmpty, system will set automatically backgroundColor to default
   const BsNavbarStyle({
     this.borderRadius,
@@ -26,7 +25,6 @@ class BsNavbarStyle {
 
 /// Class for customize size of [BsNavbar]
 class BsNavbarSize {
-
   /// Constructor of [BsNavbarSize]
   const BsNavbarSize({
     this.padding,
@@ -36,9 +34,8 @@ class BsNavbarSize {
   final EdgeInsetsGeometry? padding;
 
   /// This is default example [BsNavbarSize] with name medium size
-  static const BsNavbarSize md = BsNavbarSize(
-    padding: EdgeInsets.only(top: 10.0, bottom: 10.0)
-  );
+  static const BsNavbarSize md =
+      BsNavbarSize(padding: EdgeInsets.only(top: 10.0, bottom: 10.0));
 }
 
 /// Create beautifull navigation bar using [BsNavbar]
@@ -46,7 +43,6 @@ class BsNavbarSize {
 /// To customize style [BsNavbar] using [BsNavbarStyle] or [BsNavbarSize] to
 /// customize size of [BsNavbar]
 class BsNavbar extends StatelessWidget {
-
   /// If [style] isEmpty, system will automatically set style to [BsNavbarStyle.style_1]
   /// If [size] isEmpty, system will automatically set style to [BsNavbarSize.md]
   const BsNavbar({
@@ -79,9 +75,7 @@ class BsNavbar extends StatelessWidget {
       margin: margin,
       padding: size.padding,
       decoration: BoxDecoration(
-        color: style.backgroundColor,
-        borderRadius: style.borderRadius
-      ),
+          color: style.backgroundColor, borderRadius: style.borderRadius),
       child: Row(
         children: [
           brand == null ? Container(width: 0) : Container(child: brand),

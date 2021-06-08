@@ -2,7 +2,6 @@ import 'package:bs_flutter_utils/bs_flutter_utils.dart';
 import 'package:flutter/cupertino.dart';
 
 class BsFluid {
-
   const BsFluid({
     required this.breakPoints,
   });
@@ -21,25 +20,38 @@ class BsFluid {
     breakPoints: [BreakPoint.stateXs, BreakPoint.stateSm],
   );
 
-  static const BsFluid lg = BsFluid(
-      breakPoints: [BreakPoint.stateXs, BreakPoint.stateSm, BreakPoint.stateMd]
-  );
+  static const BsFluid lg = BsFluid(breakPoints: [
+    BreakPoint.stateXs,
+    BreakPoint.stateSm,
+    BreakPoint.stateMd
+  ]);
 
-  static const BsFluid xl = BsFluid(
-      breakPoints: [BreakPoint.stateXs, BreakPoint.stateSm, BreakPoint.stateMd, BreakPoint.stateLg]
-  );
+  static const BsFluid xl = BsFluid(breakPoints: [
+    BreakPoint.stateXs,
+    BreakPoint.stateSm,
+    BreakPoint.stateMd,
+    BreakPoint.stateLg
+  ]);
 
-  static const BsFluid xxl = BsFluid(
-      breakPoints: [BreakPoint.stateXs, BreakPoint.stateSm, BreakPoint.stateMd, BreakPoint.stateLg, BreakPoint.stateXl]
-  );
+  static const BsFluid xxl = BsFluid(breakPoints: [
+    BreakPoint.stateXs,
+    BreakPoint.stateSm,
+    BreakPoint.stateMd,
+    BreakPoint.stateLg,
+    BreakPoint.stateXl
+  ]);
 
-  static const BsFluid block = BsFluid(
-      breakPoints: [BreakPoint.stateXs, BreakPoint.stateSm, BreakPoint.stateMd, BreakPoint.stateLg, BreakPoint.stateXl, BreakPoint.stateXxl]
-  );
+  static const BsFluid block = BsFluid(breakPoints: [
+    BreakPoint.stateXs,
+    BreakPoint.stateSm,
+    BreakPoint.stateMd,
+    BreakPoint.stateLg,
+    BreakPoint.stateXl,
+    BreakPoint.stateXxl
+  ]);
 }
 
 class BsContainer extends StatelessWidget {
-
   const BsContainer({
     Key? key,
     this.fluid = BsFluid.sm,
@@ -90,31 +102,33 @@ class BsContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     BreakPoint breakPoint = BreakPoint.of(context);
 
-    return !visibility.breakPoints.contains(breakPoint.state) ? Container(width: 0)
+    return !visibility.breakPoints.contains(breakPoint.state)
+        ? Container(width: 0)
         : Row(
-      children: [
-        Expanded(child: Column(
-          children: [
-            Container(
-              color: color,
-              constraints: constraints,
-              alignment: alignment,
-              height: height,
-              width: fluid.breakPoints.contains(breakPoint.state)
-                  ? double.infinity
-                  : breakPoint.containerWidth,
-              padding: padding,
-              margin: margin,
-              decoration: decoration,
-              foregroundDecoration: foregroundDecoration,
-              transform: transform,
-              transformAlignment: transformAligment,
-              clipBehavior: clipBehavior,
-              child: child,
-            )
-          ],
-        ))
-      ],
-    );
+            children: [
+              Expanded(
+                  child: Column(
+                children: [
+                  Container(
+                    color: color,
+                    constraints: constraints,
+                    alignment: alignment,
+                    height: height,
+                    width: fluid.breakPoints.contains(breakPoint.state)
+                        ? double.infinity
+                        : breakPoint.containerWidth,
+                    padding: padding,
+                    margin: margin,
+                    decoration: decoration,
+                    foregroundDecoration: foregroundDecoration,
+                    transform: transform,
+                    transformAlignment: transformAligment,
+                    clipBehavior: clipBehavior,
+                    child: child,
+                  )
+                ],
+              ))
+            ],
+          );
   }
 }

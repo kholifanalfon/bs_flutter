@@ -31,7 +31,8 @@ class ExampleGrid extends StatelessWidget {
           padding: EdgeInsets.all(20.0),
           sizes: ColScreen(sm: Col.col_12, md: Col.col_12, lg: Col.col_6),
           order: ColOrder(md: 1),
-          child: Center(child: Text('col-sm-12 col-md-12 col-md-6 col-order-lg-1')),
+          child: Center(
+              child: Text('col-sm-12 col-md-12 col-md-6 col-order-lg-1')),
         ),
         BsCol(
           decoration: BoxDecoration(border: Border.all(color: Colors.black)),
@@ -56,7 +57,7 @@ class ExampleGrid extends StatelessWidget {
                 padding: EdgeInsets.all(10.0),
                 sizes: ColScreen(md: Col.col_4),
                 offset: ColScreen(lg: Col.col_4),
-                child: Center(child:Text('Nested col-md-4 col-offset-lg-4')),
+                child: Center(child: Text('Nested col-md-4 col-offset-lg-4')),
               ),
             ],
           ),
@@ -64,5 +65,4 @@ class ExampleGrid extends StatelessWidget {
       ],
     );
   }
-
 }

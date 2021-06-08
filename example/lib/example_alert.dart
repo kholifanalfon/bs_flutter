@@ -105,5 +105,4 @@ class ExampleAlert extends StatelessWidget {
       ],
     );
   }
-
 }

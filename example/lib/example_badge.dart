@@ -58,5 +58,4 @@ class ExampleBadge extends StatelessWidget {
       ],
     );
   }
-
 }
