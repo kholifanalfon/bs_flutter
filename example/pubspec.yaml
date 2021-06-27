@@ -28,7 +28,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  bs_flutter_utils: ^1.0.0
+  http: ^0.13.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -15,8 +15,57 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  bs_flutter_alert:
+    dependency: "direct main"
+    description:
+      name: bs_flutter_alert
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  bs_flutter_buttons:
+    dependency: "direct main"
+    description:
+      name: bs_flutter_buttons
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
+  bs_flutter_datatable:
+    dependency: "direct main"
+    description:
+      name: bs_flutter_datatable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
+  bs_flutter_inputtext:
+    dependency: "direct main"
+    description:
+      name: bs_flutter_inputtext
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  bs_flutter_modal:
+    dependency: "direct main"
+    description:
+      name: bs_flutter_modal
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  bs_flutter_responsive:
+    dependency: "direct main"
+    description:
+      name: bs_flutter_responsive
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  bs_flutter_selectbox:
+    dependency: "direct main"
+    description:
+      name: bs_flutter_selectbox
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   bs_flutter_utils:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: bs_flutter_utils
       url: "https://pub.dartlang.org"

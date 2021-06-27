@@ -22,8 +22,57 @@ packages:
       relative: true
     source: path
     version: "0.1.1"
+  bs_flutter_alert:
+    dependency: transitive
+    description:
+      name: bs_flutter_alert
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  bs_flutter_buttons:
+    dependency: transitive
+    description:
+      name: bs_flutter_buttons
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
+  bs_flutter_datatable:
+    dependency: transitive
+    description:
+      name: bs_flutter_datatable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
+  bs_flutter_inputtext:
+    dependency: transitive
+    description:
+      name: bs_flutter_inputtext
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  bs_flutter_modal:
+    dependency: transitive
+    description:
+      name: bs_flutter_modal
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  bs_flutter_responsive:
+    dependency: transitive
+    description:
+      name: bs_flutter_responsive
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  bs_flutter_selectbox:
+    dependency: transitive
+    description:
+      name: bs_flutter_selectbox
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   bs_flutter_utils:
-    dependency: "direct dev"
+    dependency: transitive
     description:
       name: bs_flutter_utils
       url: "https://pub.dartlang.org"
@@ -86,6 +135,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  http:
+    dependency: "direct dev"
+    description:
+      name: http
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.13.3"
+  http_parser:
+    dependency: transitive
+    description:
+      name: http_parser
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.0"
   js:
     dependency: transitive
     description:
@@ -114,6 +177,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
+  pedantic:
+    dependency: transitive
+    description:
+      name: pedantic
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.11.1"
   sky_engine:
     dependency: transitive
     description: flutter

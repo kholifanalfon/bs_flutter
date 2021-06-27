@@ -1,3 +1,15 @@
+## 0.2.1
+* adding BsSelectBox, BsDatatable
+* Rename BsValidator to BsInputValidator
+* Separate to another package
+    - https://pub.dev/packages/bs_flutter_responsive
+    - https://pub.dev/packages/bs_flutter_buttons
+    - https://pub.dev/packages/bs_flutter_inputtext
+    - https://pub.dev/packages/bs_flutter_alert
+    - https://pub.dev/packages/bs_flutter_modal
+    - https://pub.dev/packages/bs_flutter_selectbox
+    - https://pub.dev/packages/bs_flutter_datatable
+
 ## 0.1.1
 * adding BsAlert, BsBadge, BsButtons, BsHorizontalRule, BsInputText, BsModal
 * rename class ColSize to ColScreen
