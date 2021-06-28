@@ -1,6 +1,7 @@
 export 'src/others/bs_container.dart';
 export 'src/navbars/bs_navbar.dart';
 export 'src/components/bs_hr.dart';
+export 'src/components/bs_form_group.dart';
 
 export 'package:bs_flutter_responsive/bs_flutter_responsive.dart';
 export 'package:bs_flutter_utils/bs_flutter_utils.dart';

@@ -17,8 +17,7 @@ class _ExampleSelectBoxState extends State<ExampleSelectBox> {
     BsSelectBoxOption(value: 2, text: Text('2')),
     BsSelectBoxOption(value: 3, text: Text('3')),
   ]);
-  BsSelectBoxController _select2 =
-      BsSelectBoxController(multiple: true, options: [
+  BsSelectBoxController _select2 = BsSelectBoxController(multiple: true, options: [
     BsSelectBoxOption(value: 1, text: Text('1')),
     BsSelectBoxOption(value: 2, text: Text('2')),
     BsSelectBoxOption(value: 3, text: Text('3')),

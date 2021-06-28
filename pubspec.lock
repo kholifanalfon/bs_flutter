@@ -42,7 +42,7 @@ packages:
       name: bs_flutter_datatable
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.1"
+    version: "1.0.3"
   bs_flutter_inputtext:
     dependency: "direct main"
     description:
@@ -56,7 +56,7 @@ packages:
       name: bs_flutter_modal
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.1"
   bs_flutter_responsive:
     dependency: "direct main"
     description:
@@ -70,7 +70,7 @@ packages:
       name: bs_flutter_selectbox
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.2"
   bs_flutter_utils:
     dependency: "direct main"
     description:

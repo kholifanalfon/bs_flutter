@@ -1,4 +1,9 @@
-## 0.2.1
+## 0.2.8
+* Add BsFormGroup widget
+* Minor bug fixed
+* * Bug fix, after Navigator.pop() dialog overlay not showing
+
+## 0.2.2
 * add BsCard from https://pub.dev/packages/bs_flutter_card/example
 
 ## 0.2.1
