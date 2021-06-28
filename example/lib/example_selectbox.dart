@@ -42,49 +42,56 @@ class _ExampleSelectBoxState extends State<ExampleSelectBox> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: BsRow(
-        crossAxisAlignment: WrapCrossAlignment.start,
-        gutter: EdgeInsets.only(left: 10.0, right: 10.0),
+      padding: EdgeInsets.all(10.0),
+      margin: EdgeInsets.only(bottom: 20.0),
+      child: BsCard(
         children: [
-          BsCol(
-            sizes: ColScreen(sm: Col.col_2),
-            child: BsSelectBox(
-              hintText: 'Pilih salah satu',
-              selectBoxController: _select1,
-            ),
-          ),
-          BsCol(
-            sizes: ColScreen(sm: Col.col_2),
-            child: BsSelectBox(
-              hintTextLabel: 'Pilih salah satu',
-              selectBoxController: _select1,
-            ),
-          ),
-          BsCol(
-            sizes: ColScreen(sm: Col.col_2),
-            child: BsSelectBox(
-              hintText: 'Pilih multiple',
-              selectBoxController: _select2,
-            ),
-          ),
-          BsCol(
-            sizes: ColScreen(sm: Col.col_2),
-            child: BsSelectBox(
-              searchable: true,
-              disabled: true,
-              hintText: 'Pilih salah satu',
-              selectBoxController: _select2,
-            ),
-          ),
-          BsCol(
-            sizes: ColScreen(sm: Col.col_2),
-            child: BsSelectBox(
-              hintText: 'Pilih salah satu',
-              searchable: true,
-              selectBoxController: _select3,
-              serverSide: selectApi,
-            ),
-          )
+          BsCardContainer(title: Text('Select Box')),
+          BsCardContainer(child: BsRow(
+            crossAxisAlignment: WrapCrossAlignment.start,
+            gutter: EdgeInsets.only(left: 10.0, right: 10.0),
+            children: [
+              BsCol(
+                sizes: ColScreen(sm: Col.col_2),
+                child: BsSelectBox(
+                  hintText: 'Pilih salah satu',
+                  selectBoxController: _select1,
+                ),
+              ),
+              BsCol(
+                sizes: ColScreen(sm: Col.col_2),
+                child: BsSelectBox(
+                  hintTextLabel: 'Pilih salah satu',
+                  selectBoxController: _select1,
+                ),
+              ),
+              BsCol(
+                sizes: ColScreen(sm: Col.col_2),
+                child: BsSelectBox(
+                  hintText: 'Pilih multiple',
+                  selectBoxController: _select2,
+                ),
+              ),
+              BsCol(
+                sizes: ColScreen(sm: Col.col_2),
+                child: BsSelectBox(
+                  searchable: true,
+                  disabled: true,
+                  hintText: 'Pilih salah satu',
+                  selectBoxController: _select2,
+                ),
+              ),
+              BsCol(
+                sizes: ColScreen(sm: Col.col_2),
+                child: BsSelectBox(
+                  hintText: 'Pilih salah satu',
+                  searchable: true,
+                  selectBoxController: _select3,
+                  serverSide: selectApi,
+                ),
+              )
+            ],
+          ))
         ],
       ),
     );

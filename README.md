@@ -2,7 +2,10 @@
 
 Simple flutter widget from Bootstrap v5 component, including responsive grid layout with bootstrap grid system
 
-![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example.png "Example Bs Flutter")
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example-part1.png "Example Bs Flutter")
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example-part2.png "Example Bs Flutter")
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example-part3.png "Example Bs Flutter")
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example-part4.png "Example Bs Flutter")
 
 ### Components
 

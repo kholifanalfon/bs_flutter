@@ -65,22 +65,28 @@ class _ExampleDatatablesState extends State<ExampleDatatables> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(10.0),
-      child: BsDatatable(
-        source: _source,
-        controller: _controller,
-        searchable: true,
-        pageLength: true,
-        paginations: ['firstPage', 'previous', 'button', 'next', 'lastPage'],
-        columns: <BsDataColumn>[
-          BsDataColumn(
-              label: Text('No'),
-              orderable: false,
-              searchable: false,
-              width: 100.0),
-          BsDataColumn(label: Text('Code'), width: 200.0),
-          BsDataColumn(label: Text('Name')),
+      margin: EdgeInsets.only(bottom: 20.0),
+      child: BsCard(
+        children: [
+          BsCardContainer(title: Text('Datatables')),
+          BsCardContainer(child: BsDatatable(
+            source: _source,
+            controller: _controller,
+            searchable: true,
+            pageLength: true,
+            paginations: ['firstPage', 'previous', 'button', 'next', 'lastPage'],
+            columns: <BsDataColumn>[
+              BsDataColumn(
+                  label: Text('No'),
+                  orderable: false,
+                  searchable: false,
+                  width: 100.0),
+              BsDataColumn(label: Text('Code'), width: 200.0),
+              BsDataColumn(label: Text('Name')),
+            ],
+            serverSide: loadApi,
+          ))
         ],
-        serverSide: loadApi,
       ),
     );
   }
