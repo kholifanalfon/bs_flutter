@@ -374,7 +374,7 @@ Modal will be show using `showDialog`, because `BsModal` is a `Dialog` widget
 ### Card
 Example: [`example_card.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_card.dart)
 
-![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter_card/main/screenshot/example.png "Card Example")
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_card.png "Screenshot Example Card")
 
 Create box card:
 
@@ -403,6 +403,10 @@ Create box card:
 - To custom card style use `BsCardContainerStyle` or `BsCardStyle`
 
 ## Select Box
+Example: [`example_selectbox.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_selectbox.dart)
+
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_selectbox.png "Screenshot Example Select Box")
+
 To create a select box you need to import:
 
 ```dart
@@ -592,6 +596,8 @@ Json response data
 
 ## ServerSide Datatables (with datatables response)
 Example: [`example_datatables.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_datatables.dart)
+
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_datatables.png "Screenshot Example Datatables")
 
 To create a select box you need to import:
 
