@@ -2,6 +2,7 @@ import 'package:bs_flutter/bs_flutter.dart';
 import 'package:bs_flutter_example/example_alert.dart';
 import 'package:bs_flutter_example/example_badge.dart';
 import 'package:bs_flutter_example/example_buttons.dart';
+import 'package:bs_flutter_example/example_card.dart';
 import 'package:bs_flutter_example/example_datatables.dart';
 import 'package:bs_flutter_example/example_grid.dart';
 import 'package:bs_flutter_example/example_inputtext.dart';
@@ -41,6 +42,7 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ),
               ),
+              ExampleCard(),
               ExampleGrid(),
               ExampleButtons(),
               ExampleBadge(),

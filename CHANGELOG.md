@@ -1,4 +1,7 @@
 ## 0.2.1
+* add BsCard from https://pub.dev/packages/bs_flutter_card/example
+
+## 0.2.1
 * adding BsSelectBox, BsDatatable
 * Rename BsValidator to BsInputValidator
 * Separate to another package

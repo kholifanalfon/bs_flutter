@@ -10,3 +10,4 @@ export 'package:bs_flutter_selectbox/bs_flutter_selectbox.dart';
 export 'package:bs_flutter_modal/bs_flutter_modal.dart';
 export 'package:bs_flutter_buttons/bs_flutter_buttons.dart';
 export 'package:bs_flutter_alert/bs_flutter_alert.dart';
+export 'package:bs_flutter_card/bs_flutter_card.dart';
