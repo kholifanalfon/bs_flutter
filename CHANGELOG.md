@@ -1,7 +1,12 @@
-## 0.2.8
+## 0.2.10
+* Disabled change background color
+* Minor bug fixed
+* serverside order process fixed
+
+## 0.2.9
 * Add BsFormGroup widget
 * Minor bug fixed
-* * Bug fix, after Navigator.pop() dialog overlay not showing
+* Bug fix, after Navigator.pop() dialog overlay not showing
 
 ## 0.2.2
 * add BsCard from https://pub.dev/packages/bs_flutter_card/example

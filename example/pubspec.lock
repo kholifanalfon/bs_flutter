@@ -21,7 +21,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.2.7"
+    version: "0.2.9"
   bs_flutter_alert:
     dependency: transitive
     description:
@@ -49,14 +49,14 @@ packages:
       name: bs_flutter_datatable
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.3"
+    version: "1.0.4"
   bs_flutter_inputtext:
     dependency: transitive
     description:
       name: bs_flutter_inputtext
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.1"
   bs_flutter_modal:
     dependency: transitive
     description:
@@ -77,7 +77,7 @@ packages:
       name: bs_flutter_selectbox
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.2"
+    version: "1.0.3"
   bs_flutter_utils:
     dependency: transitive
     description:
