@@ -1,4 +1,4 @@
-## 0.2.10
+## 0.2.11
 * Disabled change background color
 * Minor bug fixed
 * serverside order process fixed
