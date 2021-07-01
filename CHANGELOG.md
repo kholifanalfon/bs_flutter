@@ -1,3 +1,6 @@
+## 0.3.0
+* Adding dropdown button with widgets dropdown item, dropdown divider, dropdown header
+
 ## 0.2.11
 * Disabled change background color
 * Minor bug fixed

@@ -1,39 +1,39 @@
-# BS Flutter (Bootstrap Flutter)
+# Bootstrap's Flutter
 
-Simple flutter widget from Bootstrap v5 component, including responsive grid layout with bootstrap grid system
+Simple flutter widget from Bootstrap v5 component, including responsive grid layout based on bootstrap grid system
 
-![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example-part1.png "Example Bs Flutter")
-![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example-part2.png "Example Bs Flutter")
-![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example-part3.png "Example Bs Flutter")
-![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example-part4.png "Example Bs Flutter")
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example-part1.gif "Example Bs Flutter")
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example-part2.gif "Example Bs Flutter")
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example-part3.gif "Example Bs Flutter")
 
-### Components
+## Avaiable Components
 
 - [x] Container
-- [x] [`Buttons`](https://github.com/kholifanalfon/bs_flutter_buttons)
+- [x] [`Bootstrap Flutter Buttons`](https://github.com/kholifanalfon/bs_flutter_buttons)
     - [x] Button size
     - [x] Button with prefix or suffix icon
     - [x] Button with badge
-- [x] [`Modal`](https://github.com/kholifanalfon/bs_flutter_modal)
+    - [x] Dropdown Buttons
+- [x] [`Bootstrap Flutter Modal`](https://github.com/kholifanalfon/bs_flutter_modal)
     - [x] Modal size (small, medium, large, extra large, extra extra large)
     - [x] Alignment for modal content
-- [x] [`Input Text`](https://github.com/kholifanalfon/bs_flutter_inputtext)
+- [x] [`Bootstrap Flutter Input Text`](https://github.com/kholifanalfon/bs_flutter_inputtext)
     - [x] onChange validator (only using `BsValidator`)
     - [x] Error message with beautiful design
-- [x] [`Alert`](https://github.com/kholifanalfon/bs_flutter_alert)
-- [x] [`Badge`](https://github.com/kholifanalfon/bs_flutter_buttons)
+- [x] [`Bootstrap Flutter Alert`](https://github.com/kholifanalfon/bs_flutter_alert)
+- [x] [`Bootstrap Flutter Card`](https://github.com/kholifanalfon/bs_flutter_card)
 - [x] [`Serverside Datatables (with datatables response)`](https://github.com/kholifanalfon/bs_flutter_datatables)
     - [x] Searchble
     - [x] Orderable
     - [x] Page Length
     - [x] Pagination
     - [x] Customize Style
-- [x] [`SelectBox`](https://github.com/kholifanalfon/bs_flutter_selectbox)
+- [x] [`Bootstrap Flutter SelectBox`](https://github.com/kholifanalfon/bs_flutter_selectbox)
 - [ ] Checkbox
 - [ ] Radio Button
 
 ### Utilities
-- [x] [`Grid System`](https://github.com/kholifanalfon/bs_flutter_responsive)
+- [x] [`Grid System (Bootstrap Flutter Responsive)`](https://github.com/kholifanalfon/bs_flutter_responsive)
     - [x] Nestable
     - [x] Column ordering 
     - [x] Custom gutters
@@ -52,7 +52,7 @@ dependencies:
   bs_flutter: any
 ```
 
-### Responsive Grid / Grid System
+## Responsive Grid / Grid System
 Example: [`example_grid.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_grid.dart)
 
 Grid system is very important when you create some web application. Especially for create responsive layout. This plugin is help to solve it
@@ -135,16 +135,16 @@ BsRow(
 // ...
 )
 ```
-#### Note
+### Note
 - Properties `sizes` in `BsCol` is has default value `Col.col_12` or 100% of screen width
 - If need to ordering column use properties `order` with value `BsScreen`
 - If need to custom offset of column use properties `offet` with value `BsScreen`
 - `BsVisibility.hiddenMd` will hide widget in max screen medium or < 768 px, above it will show
 
-### Buttons
-Example: [`example_buttons.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_buttons.dart)
+## Bootstrap Flutter Buttons
+Example: [`example_buttons.dart`](https://github.com/kholifanalfon/bs_flutter_buttons/blob/main/example/lib/main.dart)
 
-![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_buttons.png "Screenshot Example Buttons")
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter_buttons/main/screenshot/example.png "Screenshot Example Buttons")
 
 We have 15 button style and 3 button size, but you can create custom size using `BsButtonSize` and custom style using `BsButtonStyle`
 
@@ -179,11 +179,6 @@ To create some button use `BsButton`
 // ...
 ```
 
-### Badge
-Example: [`example_badge.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_badge.dart)
-
-![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_badge.png "Screenshot Example Badge")
-
 You can create custom size using `BsBadgeSize` and custom style using `BsBadgeStyle`
 
 ```dart
@@ -214,7 +209,109 @@ To create badge use `BsBadge`, `BsBadge` is available use in `BsButton`
 // ...
 ```
 
-### Text Input
+Default dropdown button
+
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter_buttons/main/screenshot/example.gif "Screenshot Example Buttons")
+
+```dart
+// ...
+    BsDropdownButton(
+      margin: EdgeInsets.only(right: 5.0),
+      toggleMenu: (_) => BsButton(
+        onPressed: () => _.toggle(),
+        style: BsButtonStyle.primary,
+        suffixIcon: Icons.arrow_drop_down,
+        label: Text('Primary'),
+      ),
+      dropdownMenu: BsDropdownMenu(
+        children: [
+          BsDropdownHeader(child: Text('Dropdown Header')),
+          BsDropdownItem(child: Text('Action')),
+          BsDropdownItem(child: Text('Another Action')),
+          BsDropdownItem(child: Text('Something else here')),
+          BsDropdownItem(child: Text('Separate link')),
+        ],
+      ),
+    )
+// ...
+```
+
+To configure maximum/minimum width and height, you can use property `dropdownMenuSize`
+the default of minimum height and width is 150
+
+```dart
+    BsDropdownButton(
+      // ...
+      dropdownMenuSize: BsDropdownMenuSize(
+        minWidth: 150,
+        maxWidth: 300,
+        minHeight: 150,
+        maxHeight: 300
+      ),
+      // ...
+    )
+```
+
+If you want to create dropdown in left/right side of button, you can use property `dropdownDirection`
+
+```dart
+
+  BsDropdownButton(
+    // ...
+    dropdownDirection: Axis.horizontal,
+    // ...
+  ),
+```
+
+If you want to customize dropdown style, you can use property `dropdownMenuStyle`
+
+```dart
+  BsDropdownButton(
+    // ...
+    dropdownMenuStyle: BsDropdownMenuStyle(
+      backgroundColor: Colors.red,
+      boxShadow: [
+        BoxShadow(
+          color: Color(0xffd9d9d9),
+          spreadRadius: 2.0,
+          blurRadius: 5.0
+        )
+      ]
+    ),
+    // ...
+  ),
+```
+
+You can also set dropdown item to `active` and `disabled`
+If you want to customize `active` or `disabled` style, you can use property `activeStyle`, `activeTextStyle`, `disabledStyle` and `disabledTextStyle`
+
+```dart
+  BsDropdownButton(
+    // ...
+    dropdownMenu: BsDropdownMenu(
+      children: [
+        BsDropdownItem(
+          child: Text('Action'), 
+          active: true, 
+          activeStyle: ButtonStyle(),
+          activeTextStyle: TextStyle(),
+        ),
+        BsDropdownItem(
+          child: Text('Another Action'), 
+          disabled: true, 
+          disabledStyle: ButtonStyle(),
+          disabledTextStyle: TextStyle(),
+        ),
+        BsDropdownItem(child: Text('Something else here')),
+        BsDropdownDivider(),
+        BsDropdownItem(child: Text('Separate link')),
+      ],
+    )
+  // ...
+  ),
+```
+
+## Bootstrap Flutter Input Text
 Example: [`example_inputtext.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_inputtext.dart)
 
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_inputtext.png "Screenshot Example Badge")
@@ -258,7 +355,7 @@ Example:
 ```
 `validator` properties will call when form on validating
 
-### Alert
+## Bootstrap Flutter Alert
 Example: [`example_alert.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_alert.dart)
 
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_alert.png "Screenshot Example Alert")
@@ -309,7 +406,7 @@ You can create custom alert style using `BsAlertStyle` and alert color using `Bs
   );
 ```
 
-### Modals
+## Bootstrap Flutter Modals
 Example: [`example_modal.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_modal.dart)
 
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_modal_1.png "Screenshot Example Modal")
@@ -362,7 +459,7 @@ Modal will be show using `showDialog`, because `BsModal` is a `Dialog` widget
 // ...
 ```
 
-#### Note
+### Note
 - `BsModalDialog` is backdrop layout
 - `BsModalContent` is content from modal
 - `BsModalContainer` is children from `BsModalContent`
@@ -371,7 +468,7 @@ Modal will be show using `showDialog`, because `BsModal` is a `Dialog` widget
 - To set `BsModalContent` to centered, you can modify `mainAxisAlignment` on `BsModalDialog` properties
 
 
-### Card
+## Bootstrap Flutter Card
 Example: [`example_card.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_card.dart)
 
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_card.png "Screenshot Example Card")
@@ -402,7 +499,7 @@ Create box card:
 ### Note
 - To custom card style use `BsCardContainerStyle` or `BsCardStyle`
 
-## Select Box
+## Bootstrap Flutter Select Box
 Example: [`example_selectbox.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_selectbox.dart)
 
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter/main/screenshot/example_selectbox.png "Screenshot Example Select Box")
@@ -467,12 +564,6 @@ If you need to customize size and style, use properties `style` and `size`. And 
 - `transitionLabelX` and `transitionLabelY` is used to set label position if using `hintTextLabel` when have selected value
 - `BsSelectBoxStyle` have properties `borderRadius`, `color`, `placeholderColor`, `selectedBackgroundColor`, `selectedColor`, `disabledBackgroundColor`, `backgroundColor`, `borderColor`, `fontSize`, `arrowIcon`
 
-
-## Select Box Style 2 (hintTextLabel)
-Example: [`example_selectbox.dart`](https://github.com/kholifanalfon/bs_flutter/blob/main/example/lib/example_selectbox.dart)
-
-![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter_selectbox/main/screenshot/general.png "Bs Select Box")
-
 Select box using `hintTextLabel`
 ```dart
 // ...
@@ -484,8 +575,6 @@ Select box using `hintTextLabel`
 ```
 
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter_selectbox/main/screenshot/selectbox2.png "Label Hint Text Select Box")
-
-## Select Box Multiple
 
 To create a select box with multiple allowed set `multiple` properties in `BsSelectBoxController` to true:
 
@@ -511,8 +600,6 @@ To create a select box with multiple allowed set `multiple` properties in `BsSel
 - To set selected value use `setSelected` or `setSelectedAll`
 
 ![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter_selectbox/main/screenshot/selectbox3.png "Multiple Select Box")
-
-## Select Box Server Side
 
 To create a select box with server side data, use `serverSide` property 
 
