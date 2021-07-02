@@ -1,3 +1,7 @@
+## 0.3.1
+
+* Update datatable version to v1.1.0
+
 ## 0.3.0
 * Adding dropdown button with widgets dropdown item, dropdown divider, dropdown header
 
