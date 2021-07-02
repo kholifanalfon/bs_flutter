@@ -684,6 +684,8 @@ Json response data
 ## ServerSide Datatables (with datatables response)
 Example: [`main.dart`](https://github.com/kholifanalfon/bs_flutter_datatable/blob/main/example/lib/main.dart)
 
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter_datatable/main/screenshot/example.gif "Datatables Example")
+
 To create a select box you need to import:
 
 ```dart
