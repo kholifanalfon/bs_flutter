@@ -262,10 +262,10 @@ class ExampleButtons extends StatelessWidget {
                       toggleMenu: (_) => BsButton(
                         onPressed: () => _.toggle(),
                         style: BsButtonStyle.primary,
-                        size: BsButtonSize.btnSm,
                         suffixIcon: Icons.arrow_drop_down,
-                        label: Text('Primary'),
+                        label: Text('Bottom'),
                       ),
+                      dropdownDirection: BsDropdownDirection.bottom,
                       dropdownMenu: BsDropdownMenu(
                         children: [
                           BsDropdownItem(child: Text('Action')),
@@ -282,131 +282,90 @@ class ExampleButtons extends StatelessWidget {
                         onPressed: () => _.toggle(),
                         style: BsButtonStyle.primary,
                         suffixIcon: Icons.arrow_drop_down,
-                        label: Text('Primary'),
+                        label: Text('Top'),
                       ),
-                      dropdownMenuSize: BsDropdownMenuSize(
-                          minWidth: 150,
-                          maxWidth: 300,
-                          minHeight: 150,
-                          maxHeight: 300
-                      ),
+                      dropdownDirection: BsDropdownDirection.top,
                       dropdownMenu: BsDropdownMenu(
                         children: [
                           BsDropdownHeader(child: Text('Dropdown Header')),
                           BsDropdownItem(child: Text('Action')),
                           BsDropdownItem(child: Text('Another Action')),
                           BsDropdownItem(child: Text('Something else here')),
+                          BsDropdownDivider(),
                           BsDropdownItem(child: Text('Separate link')),
                         ],
                       ),
                     ),
                     BsDropdownButton(
-                      margin: EdgeInsets.only(left: 10.0, right: 10.0),
+                      margin: EdgeInsets.only(right: 5.0),
                       toggleMenu: (_) => BsButton(
                         onPressed: () => _.toggle(),
                         style: BsButtonStyle.primary,
-                        size: BsButtonSize.btnLg,
+                        suffixIcon: Icons.arrow_right,
+                        label: Text('Right'),
+                      ),
+                      dropdownDirection: BsDropdownDirection.right,
+                      dropdownMenu: BsDropdownMenu(
+                        children: [
+                          BsDropdownItem(child: Text('Action')),
+                          BsDropdownItem(child: Text('Another Action')),
+                          BsDropdownItem(child: Text('Something else here')),
+                          BsDropdownDivider(),
+                          BsDropdownItem(child: Text('Separate link')),
+                        ],
+                      ),
+                    ),
+                    BsDropdownButton(
+                      margin: EdgeInsets.only(right: 5.0),
+                      toggleMenu: (_) => BsButton(
+                        onPressed: () => _.toggle(),
+                        style: BsButtonStyle.primary,
+                        prefixIcon: Icons.arrow_left,
+                        label: Text('Left'),
+                      ),
+                      dropdownDirection: BsDropdownDirection.left,
+                      dropdownMenu: BsDropdownMenu(
+                        children: [
+                          BsDropdownItem(child: Text('Action')),
+                          BsDropdownItem(child: Text('Another Action')),
+                          BsDropdownItem(child: Text('Something else here')),
+                          BsDropdownDivider(),
+                          BsDropdownItem(child: Text('Separate link')),
+                        ],
+                      ),
+                    ),
+                    BsDropdownButton(
+                      margin: EdgeInsets.only(right: 5.0),
+                      toggleMenu: (_) => BsButton(
+                        onPressed: () => _.toggle(),
+                        style: BsButtonStyle.primary,
+                        suffixIcon: Icons.arrow_right,
+                        label: Text('Horizontal'),
+                      ),
+                      dropdownDirection: BsDropdownDirection.horizontal,
+                      dropdownMenu: BsDropdownMenu(
+                        children: [
+                          BsDropdownItem(child: Text('Action')),
+                          BsDropdownItem(child: Text('Another Action')),
+                          BsDropdownItem(child: Text('Something else here')),
+                          BsDropdownDivider(),
+                          BsDropdownItem(child: Text('Separate link')),
+                        ],
+                      ),
+                    ),
+                    BsDropdownButton(
+                      margin: EdgeInsets.only(right: 5.0),
+                      toggleMenu: (_) => BsButton(
+                        onPressed: () => _.toggle(),
+                        style: BsButtonStyle.primary,
                         suffixIcon: Icons.arrow_drop_down,
-                        label: Text('Primary'),
+                        label: Text('Vertical'),
                       ),
+                      dropdownDirection: BsDropdownDirection.vertical,
                       dropdownMenu: BsDropdownMenu(
                         children: [
                           BsDropdownItem(child: Text('Action')),
                           BsDropdownItem(child: Text('Another Action')),
-                          BsDropdownItem(child: Text('Something else here')),
-                          BsDropdownDivider(),
-                          BsDropdownItem(child: Text('Separate link')),
-                        ],
-                      ),
-                    ),
-                    BsDropdownButton(
-                      margin: EdgeInsets.only(right: 5.0),
-                      toggleMenu: (_) => BsButton(
-                        onPressed: () => _.toggle(),
-                        style: BsButtonStyle.primary,
-                        label: Text('Primary'),
-                      ),
-                      dropdownMenu: BsDropdownMenu(
-                        children: [
-                          BsDropdownItem(child: Text('Action')),
-                          BsDropdownItem(child: Text('Another Action')),
-                          BsDropdownItem(child: Text('Something else here')),
-                          BsDropdownDivider(),
-                          BsDropdownItem(child: Text('Separate link')),
-                        ],
-                      ),
-                    ),
-                    BsDropdownButton(
-                      margin: EdgeInsets.only(left: 10.0, right: 10.0),
-                      toggleMenu: (_) => BsButton(
-                        onPressed: () => _.toggle(),
-                        style: BsButtonStyle.primary,
-                        size: BsButtonSize.btnLg,
-                        suffixIcon: Icons.arrow_drop_down,
-                        label: Text('Primary'),
-                      ),
-                      dropdownDirection: Axis.horizontal,
-                      dropdownMenuStyle: BsDropdownMenuStyle(
-                          backgroundColor: Colors.red,
-                          boxShadow: [
-                            BoxShadow(
-                                color: Color(0xffd9d9d9),
-                                spreadRadius: 2.0,
-                                blurRadius: 5.0
-                            )
-                          ]
-                      ),
-                      dropdownMenu: BsDropdownMenu(
-                        children: [
-                          BsDropdownItem(child: Text('Action')),
-                          BsDropdownItem(child: Text('Another Action')),
-                          BsDropdownItem(child: Text('Something else here')),
-                          BsDropdownDivider(),
-                          BsDropdownItem(child: Text('Separate link')),
-                        ],
-                      ),
-                    ),
-                    BsDropdownButton(
-                      margin: EdgeInsets.only(right: 5.0),
-                      toggleMenu: (_) => BsButton(
-                        onPressed: () => _.toggle(),
-                        style: BsButtonStyle.primary,
-                        size: BsButtonSize.btnSm,
-                        label: Text('Primary'),
-                      ),
-                      dropdownMenu: BsDropdownMenu(
-                        children: [
-                          BsDropdownItem(child: Text('Action')),
-                          BsDropdownItem(child: Text('Another Action')),
-                          BsDropdownItem(child: Text('Something else here')),
-                          BsDropdownDivider(),
-                          BsDropdownItem(child: Text('Separate link')),
-                        ],
-                      ),
-                    ),
-                    BsDropdownButton(
-                      margin: EdgeInsets.only(right: 5.0),
-                      toggleMenu: (_) => BsButton(
-                        onPressed: () => _.toggle(),
-                        style: BsButtonStyle.primary,
-                        size: BsButtonSize.btnSm,
-                        label: Text('Primary'),
-                      ),
-                      dropdownDirection: Axis.horizontal,
-                      dropdownMenu: BsDropdownMenu(
-                        children: [
-                          BsDropdownItem(
-                            child: Text('Action'),
-                            active: true,
-                            activeStyle: ButtonStyle(),
-                            activeTextStyle: TextStyle(),
-                          ),
-                          BsDropdownItem(
-                            child: Text('Another Action'),
-                            disabled: true,
-                            disabledStyle: ButtonStyle(),
-                            disabledTextStyle: TextStyle(),
-                          ),
                           BsDropdownItem(child: Text('Something else here')),
                           BsDropdownDivider(),
                           BsDropdownItem(child: Text('Separate link')),
@@ -415,7 +374,7 @@ class ExampleButtons extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
+              )
             ],
           ))
         ],
