@@ -19,7 +19,7 @@ dependencies:
   bs_flutter_inputtext: ^1.0.2
   bs_flutter_selectbox: ^1.0.3
   bs_flutter_modal: ^1.0.1
-  bs_flutter_buttons: ^1.2.1
+  bs_flutter_buttons: ^1.2.3
   bs_flutter_alert: ^1.0.0
   bs_flutter_card: ^1.0.0
 
