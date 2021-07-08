@@ -1,8 +1,8 @@
-## 0.3.4
+## 0.3.5
 
 * Update datatable version to v1.1.0
 * Update buttons to v1.2.0
-* Bug fixed dropdown button
+* Bug fixed dropdown button and border radius button
 * Dropdown direction (left, right, top, bottom, horizontal, vertical)
 * BreakPoint device state (mobile, table, desktop)
 
