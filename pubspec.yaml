@@ -16,7 +16,10 @@ dependencies:
   bs_flutter_utils: ^1.0.2
   bs_flutter_responsive: ^1.0.0
   bs_flutter_datatable: ^1.1.1
-  bs_flutter_inputtext: ^1.0.6
+  bs_flutter_inputtext:
+    git:
+      url: https://github.com/kholifanalfon/bs_flutter_inputtext
+      ref: main
   bs_flutter_selectbox: ^1.1.2
   bs_flutter_modal: ^1.0.1
   bs_flutter_buttons: ^1.2.3
