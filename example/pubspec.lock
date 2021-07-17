@@ -55,7 +55,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: a43ecf9ca207bcdab76430e6a0e178af99d90f60
+      resolved-ref: e9c1b62ad8896a8f047f2568287104813005a421
       url: "https://github.com/kholifanalfon/bs_flutter_inputtext"
     source: git
     version: "1.0.7"
