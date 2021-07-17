@@ -1,3 +1,7 @@
+## 0.3.6
+* Bug minor fixed
+* Input, Select form validation
+
 ## 0.3.5
 
 * Update datatable version to v1.1.0

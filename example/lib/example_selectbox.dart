@@ -12,11 +12,21 @@ class ExampleSelectBox extends StatefulWidget {
 }
 
 class _ExampleSelectBoxState extends State<ExampleSelectBox> {
+
+  GlobalKey<FormState> _formState = GlobalKey<FormState>();
+
   BsSelectBoxController _select1 = BsSelectBoxController(options: [
     BsSelectBoxOption(value: 1, text: Text('1')),
     BsSelectBoxOption(value: 2, text: Text('2')),
     BsSelectBoxOption(value: 3, text: Text('3')),
   ]);
+
+  BsSelectBoxController _select4 = BsSelectBoxController(options: [
+    BsSelectBoxOption(value: 1, text: Text('1')),
+    BsSelectBoxOption(value: 2, text: Text('2')),
+    BsSelectBoxOption(value: 3, text: Text('3')),
+  ]);
+
   BsSelectBoxController _select2 = BsSelectBoxController(multiple: true, options: [
     BsSelectBoxOption(value: 1, text: Text('1')),
     BsSelectBoxOption(value: 2, text: Text('2')),
@@ -43,55 +53,72 @@ class _ExampleSelectBoxState extends State<ExampleSelectBox> {
     return Container(
       padding: EdgeInsets.all(10.0),
       margin: EdgeInsets.only(bottom: 20.0),
-      child: BsCard(
-        children: [
-          BsCardContainer(title: Text('Select Box')),
-          BsCardContainer(child: BsRow(
-            crossAxisAlignment: WrapCrossAlignment.start,
-            gutter: EdgeInsets.only(left: 10.0, right: 10.0),
-            children: [
-              BsCol(
-                sizes: ColScreen(sm: Col.col_2),
-                child: BsSelectBox(
-                  hintText: 'Pilih salah satu',
-                  selectBoxController: _select1,
+      child: Form(
+        key: _formState,
+        child: BsCard(
+          children: [
+            BsCardContainer(title: Text('Select Box')),
+            BsCardContainer(child: BsRow(
+              crossAxisAlignment: WrapCrossAlignment.center,
+              gutter: EdgeInsets.only(left: 10.0, right: 10.0),
+              children: [
+                BsCol(
+                  sizes: ColScreen(sm: Col.col_2),
+                  child: BsSelectBox(
+                    hintText: 'Pilih salah satu',
+                    selectBoxController: _select1,
+                    validators: [
+                      BsSelectValidators.required
+                    ],
+                  ),
                 ),
-              ),
-              BsCol(
-                sizes: ColScreen(sm: Col.col_2),
-                child: BsSelectBox(
-                  hintTextLabel: 'Pilih salah satu',
-                  selectBoxController: _select1,
+                BsCol(
+                  sizes: ColScreen(sm: Col.col_2),
+                  child: BsSelectBox(
+                    hintTextLabel: 'Pilih salah satu',
+                    selectBoxController: _select4,
+                  ),
                 ),
-              ),
-              BsCol(
-                sizes: ColScreen(sm: Col.col_2),
-                child: BsSelectBox(
-                  hintText: 'Pilih multiple',
-                  selectBoxController: _select2,
+                BsCol(
+                  sizes: ColScreen(sm: Col.col_2),
+                  child: BsSelectBox(
+                    hintText: 'Pilih multiple',
+                    selectBoxController: _select2,
+                  ),
                 ),
-              ),
-              BsCol(
-                sizes: ColScreen(sm: Col.col_2),
-                child: BsSelectBox(
-                  searchable: true,
-                  disabled: true,
-                  hintText: 'Pilih salah satu',
-                  selectBoxController: _select2,
+                BsCol(
+                  sizes: ColScreen(sm: Col.col_2),
+                  child: BsSelectBox(
+                    searchable: true,
+                    disabled: true,
+                    hintText: 'Pilih salah satu',
+                    selectBoxController: _select2,
+                  ),
                 ),
-              ),
-              BsCol(
-                sizes: ColScreen(sm: Col.col_2),
-                child: BsSelectBox(
-                  hintText: 'Pilih salah satu',
-                  searchable: true,
-                  selectBoxController: _select3,
-                  serverSide: selectApi,
+                BsCol(
+                  sizes: ColScreen(sm: Col.col_2),
+                  child: BsSelectBox(
+                    hintText: 'Pilih salah satu',
+                    searchable: true,
+                    selectBoxController: _select3,
+                    serverSide: selectApi,
+                  ),
                 ),
-              )
-            ],
-          ))
-        ],
+                BsCol(
+                  sizes: ColScreen(sm: Col.col_2),
+                  child: BsButton(
+                    label: Text('Validate'),
+                    prefixIcon: Icons.open_in_new,
+                    style: BsButtonStyle.primary,
+                    onPressed: () {
+                      _formState.currentState!.validate();
+                    },
+                  )
+                )
+              ],
+            ))
+          ],
+        ),
       ),
     );
   }
