@@ -1,4 +1,4 @@
-## 0.3.6
+## 0.3.7
 * Bug minor fixed
 * Input, Select form validation
 
