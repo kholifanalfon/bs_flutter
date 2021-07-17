@@ -46,12 +46,10 @@ packages:
   bs_flutter_inputtext:
     dependency: "direct main"
     description:
-      path: "."
-      ref: main
-      resolved-ref: e9c1b62ad8896a8f047f2568287104813005a421
-      url: "https://github.com/kholifanalfon/bs_flutter_inputtext"
-    source: git
-    version: "1.0.7"
+      name: bs_flutter_inputtext
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.8"
   bs_flutter_modal:
     dependency: "direct main"
     description:
