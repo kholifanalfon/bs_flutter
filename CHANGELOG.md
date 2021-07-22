@@ -1,4 +1,4 @@
-## 0.3.12
+## 0.3.13
 * Mobile style bug fixed
 * Bug minor fixed
 * Input, Select form validation
