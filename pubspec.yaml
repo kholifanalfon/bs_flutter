@@ -1,6 +1,6 @@
 name: bs_flutter
 description: Simple flutter widget from Bootstrap v5 component, including responsive grid layout based on bootstrap grid system
-version: 0.3.11
+version: 0.3.12
 homepage: https://github.com/kholifanalfon/bs_flutter
 
 environment:
