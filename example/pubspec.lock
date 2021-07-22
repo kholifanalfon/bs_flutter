@@ -21,7 +21,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.3.9"
+    version: "0.3.10"
   bs_flutter_alert:
     dependency: transitive
     description:
@@ -35,7 +35,7 @@ packages:
       name: bs_flutter_buttons
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.4"
+    version: "1.2.5"
   bs_flutter_card:
     dependency: transitive
     description:

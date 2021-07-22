@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class BsFormGroup extends StatelessWidget {
 
@@ -30,6 +31,7 @@ class BsFormGroup extends StatelessWidget {
         children: [
           DefaultTextStyle(
             style: TextStyle(
+              color: Theme.of(context).textTheme.bodyText1!.color,
               fontSize: 12.0,
               fontWeight: FontWeight.bold
             ).merge(textStyle),
