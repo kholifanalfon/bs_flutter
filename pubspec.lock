@@ -49,7 +49,7 @@ packages:
       name: bs_flutter_inputtext
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.10"
+    version: "1.0.11"
   bs_flutter_modal:
     dependency: "direct main"
     description:
@@ -63,7 +63,7 @@ packages:
       name: bs_flutter_responsive
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.1"
   bs_flutter_selectbox:
     dependency: "direct main"
     description:
