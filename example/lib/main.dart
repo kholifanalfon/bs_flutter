@@ -28,32 +28,38 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: Scrollbar(
-            child: SingleChildScrollView(
-          child: Column(
-            children: [
-              BsNavbar(
-                margin: EdgeInsets.only(bottom: 20.0),
-                brand: BsNavBrand(
-                  onPressed: () {},
-                  child: Container(
-                    child: Text('Brand'),
-                  ),
+      home: GestureDetector(
+        onTap: () {
+          SelectBoxOverlay.removeAll();
+          OverlayDropdownButton.removeAll();
+        },
+        child: Scaffold(
+          body: Scrollbar(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    BsNavbar(
+                      margin: EdgeInsets.only(bottom: 20.0),
+                      brand: BsNavBrand(
+                        onPressed: () {},
+                        child: Container(
+                          child: Text('Brand'),
+                        ),
+                      ),
+                    ),
+                    ExampleCard(),
+                    ExampleGrid(),
+                    ExampleButtons(),
+                    ExampleBadge(),
+                    ExampleInputText(),
+                    ExampleAlert(),
+                    ExampleModal(),
+                    ExampleSelectBox(),
+                    ExampleDatatables(),
+                  ],
                 ),
-              ),
-              ExampleCard(),
-              ExampleGrid(),
-              ExampleButtons(),
-              ExampleBadge(),
-              ExampleInputText(),
-              ExampleAlert(),
-              ExampleModal(),
-              ExampleSelectBox(),
-              ExampleDatatables(),
-            ],
-          ),
-        )),
+              )),
+        ),
       ),
     );
   }

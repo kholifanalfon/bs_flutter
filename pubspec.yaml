@@ -16,7 +16,7 @@ dependencies:
   bs_flutter_utils: ^1.0.2
   bs_flutter_responsive: ^1.0.1
   bs_flutter_datatable: ^1.2.0
-  bs_flutter_inputtext: ^1.1.0
+  bs_flutter_inputtext: ^1.1.1
   bs_flutter_selectbox: ^1.2.1
   bs_flutter_modal: ^1.0.5
   bs_flutter_buttons: ^1.2.7
