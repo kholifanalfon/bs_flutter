@@ -5,10 +5,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import 'package:bs_flutter_buttons/bs_flutter_buttons.dart';
+import 'package:bs_flutter_datatable/bs_flutter_datatable.dart';
+
 class ExampleSource extends BsDatatableSource {
 
-  ValueChanged<dynamic> onEditListener = (value) {};
-  ValueChanged<dynamic> onDeleteListener = (value) {};
+  ExampleSource({
+    List? data,
+  }) : super(data: data);
+
+  Function(dynamic, int) onEditListener = (value, index) {};
+  Function(dynamic, int) onDeleteListener = (value, index) {};
 
   static List<BsDataColumn> get columns => <BsDataColumn>[
     BsDataColumn(label: Text('No'), orderable: false, searchable: false, width: 100.0),
@@ -27,13 +34,13 @@ class ExampleSource extends BsDatatableSource {
         children: [
           BsButton(
             margin: EdgeInsets.only(right: 5.0),
-            onPressed: () => onEditListener(response.data[index]['typecd']),
+            onPressed: () => onEditListener(response.data[index]['typecd'], index),
             prefixIcon: Icons.edit,
             size: BsButtonSize.btnIconSm,
             style: BsButtonStyle.primary,
           ),
           BsButton(
-            onPressed: () => onEditListener(response.data[index]['typecd']),
+            onPressed: () => onDeleteListener(response.data[index]['typecd'], index),
             prefixIcon: Icons.delete,
             size: BsButtonSize.btnIconSm,
             style: BsButtonStyle.danger,
@@ -44,6 +51,7 @@ class ExampleSource extends BsDatatableSource {
   }
 }
 
+
 class ExampleDatatables extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -53,6 +61,15 @@ class ExampleDatatables extends StatefulWidget {
 
 class _ExampleDatatablesState extends State<ExampleDatatables> {
   ExampleSource _source = ExampleSource();
+  ExampleSource _source1 = ExampleSource(
+      data: [
+        {'typeid': 0, 'typecd': 'TP1', 'typenm': 'Type 1'},
+        {'typeid': 0, 'typecd': 'TP2', 'typenm': 'Type 2'},
+        {'typeid': 0, 'typecd': 'TP3', 'typenm': 'Type 3'},
+        {'typeid': 0, 'typecd': 'TP4', 'typenm': 'Type 4'},
+        {'typeid': 0, 'typecd': 'TP5', 'typenm': 'Type 5'},
+      ]
+  );
 
   @override
   void initState() {
@@ -68,8 +85,17 @@ class _ExampleDatatablesState extends State<ExampleDatatables> {
       Map<String, dynamic> json = jsonDecode(value.body);
       setState(() {
         _source.response = BsDatatableResponse.createFromJson(json['data']);
-        _source.onEditListener = (typeid) {
+        _source.onEditListener = (typeid, index) {
           _source.controller.reload();
+        };
+        _source1.onEditListener = (typeid, index) {
+          final data = _source1.get(index);
+          data['typenm'] = 'Edited';
+
+          _source1.put(index, data);
+        };
+        _source1.onDeleteListener = (typeid, index) {
+          _source1.removeAt(index);
         };
       });
     });
@@ -82,7 +108,14 @@ class _ExampleDatatablesState extends State<ExampleDatatables> {
       margin: EdgeInsets.only(bottom: 20.0),
       child: BsCard(
         children: [
-          BsCardContainer(title: Text('Datatables')),
+          BsCardContainer(title: Text('Datatables'), actions: [
+            TextButton(
+              onPressed: () {
+                _source1.add({'typecd': 'TP1', 'typenm': 'Type ${_source1.datas.length}'});
+              },
+              child: Text('Add Row'),
+            )
+          ]),
           BsCardContainer(child: BsDatatable(
             source: _source,
             title: Text('Datatables Data'),
@@ -100,7 +133,14 @@ class _ExampleDatatablesState extends State<ExampleDatatables> {
                 searchLabel: 'Search Form'
             ),
             serverSide: loadApi,
-          ))
+          )),
+          BsCardContainer(
+            child: BsDatatable(
+              source: _source1,
+              title: Text('Datatables Data'),
+              columns: ExampleSource.columns,
+            ),
+          )
         ],
       ),
     );

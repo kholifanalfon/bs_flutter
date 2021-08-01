@@ -66,7 +66,7 @@ class _ExampleSelectBoxState extends State<ExampleSelectBox> {
                   sizes: ColScreen(sm: Col.col_2),
                   child: BsSelectBox(
                     hintText: 'Pilih salah satu',
-                    selectBoxController: _select1,
+                    controller: _select1,
                     validators: [
                       BsSelectValidators.required
                     ],
@@ -76,14 +76,14 @@ class _ExampleSelectBoxState extends State<ExampleSelectBox> {
                   sizes: ColScreen(sm: Col.col_2),
                   child: BsSelectBox(
                     hintTextLabel: 'Pilih salah satu',
-                    selectBoxController: _select4,
+                    controller: _select4,
                   ),
                 ),
                 BsCol(
                   sizes: ColScreen(sm: Col.col_2),
                   child: BsSelectBox(
                     hintText: 'Pilih multiple',
-                    selectBoxController: _select2,
+                    controller: _select2,
                   ),
                 ),
                 BsCol(
@@ -92,7 +92,7 @@ class _ExampleSelectBoxState extends State<ExampleSelectBox> {
                     searchable: true,
                     disabled: true,
                     hintText: 'Pilih salah satu',
-                    selectBoxController: _select2,
+                    controller: _select2,
                   ),
                 ),
                 BsCol(
@@ -100,7 +100,7 @@ class _ExampleSelectBoxState extends State<ExampleSelectBox> {
                   child: BsSelectBox(
                     hintText: 'Pilih salah satu',
                     searchable: true,
-                    selectBoxController: _select3,
+                    controller: _select3,
                     serverSide: selectApi,
                   ),
                 ),

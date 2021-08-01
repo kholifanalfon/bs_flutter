@@ -28,7 +28,7 @@ packages:
       name: bs_flutter_buttons
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.6"
+    version: "1.2.7"
   bs_flutter_card:
     dependency: "direct main"
     description:
@@ -42,21 +42,21 @@ packages:
       name: bs_flutter_datatable
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.2"
+    version: "1.2.0"
   bs_flutter_inputtext:
     dependency: "direct main"
     description:
       name: bs_flutter_inputtext
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.11"
+    version: "1.1.0"
   bs_flutter_modal:
     dependency: "direct main"
     description:
       name: bs_flutter_modal
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.4"
+    version: "1.0.5"
   bs_flutter_responsive:
     dependency: "direct main"
     description:
@@ -70,7 +70,7 @@ packages:
       name: bs_flutter_selectbox
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.13"
+    version: "1.2.1"
   bs_flutter_utils:
     dependency: "direct main"
     description:

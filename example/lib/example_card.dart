@@ -29,7 +29,7 @@ class ExampleCard extends StatelessWidget {
                   child: BsSelectBox(
                     searchable: true,
                     hintText: 'Pilih salah satu',
-                    selectBoxController: _select2,
+                    controller: _select2,
                   ),
                 )
               ],

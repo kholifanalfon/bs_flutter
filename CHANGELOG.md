@@ -1,4 +1,9 @@
-## 0.3.22
+## 0.4.0
+* Custom style selectbox
+* Showing datatable from List variable
+* Minor bug fixed
+
+## 0.3.23
 * Mobile style bug fixed
 * Bug minor fixed
 * Input, Select form validation
